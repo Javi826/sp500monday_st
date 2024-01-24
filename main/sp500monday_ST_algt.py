@@ -20,8 +20,8 @@ pd.set_option('display.max_columns', None)
 pd.set_option('display.expand_frame_repr', False)
 
 # PATHS 
-path_base = r"C:\Users\\jlahoz\\Desktop\tograms\sp500monday_st"
-folder = "inputs\historicyh"
+path_base = r"Users/javi/Desktop/Programs/p500monday_st"
+folder = "inputs/historicyh"
 archivo = "sp500_datayh.csv"
 path_absolut = os.path.join(path_base, folder, archivo)
 print(path_absolut)
@@ -39,7 +39,7 @@ end_date = "2023-12-01"
 sp500_data = yf.download(symbol, start=start_date, end=end_date)
 
 # DIRECTORY YAHOO CSV file
-csv_folder = r"C:\Users\\jlahoz\\Desktop\tograms\sp500monday_st\inputs\historicyh"
+csv_folder = r"Users/javi/Desktop/Programs/p500monday_st/inputs/historicyh"
 
 # Ensure the folder exists or create it if it doesn't
 if not os.path.exists(csv_folder): os.makedirs(csv_folder)
@@ -59,7 +59,7 @@ df_clean=mod_dtset_clean(df_data)
 
       
 # DATA YAHOO CLEANING DOWNLOADED FOLDER
-folder = "inputs\historicyh"
+folder = "inputs/historicyh"
 archivo = "df_data_cleanSPX.xlsx"
 #
 ruta_salir_main = os.path.dirname(current_directory)
@@ -103,8 +103,10 @@ if 'dataframe' in locals() and reiniciar_dataframes:
 dataframe = pd.DataFrame()
 
 # Definir variables
-num_dias_retroceder_values = [1,2,3,4,5,6,7,8,9,10,11,12]
-max_dias_ejecucion_venta_values = [1,2,3,4,5,6,7,8,9,10,11,12]
+#num_dias_retroceder_values = [1,2,3,4,5,6,7,8,9,10,11,12]
+#max_dias_ejecucion_venta_values = [1,2,3,4,5,6,7,8,9,10,11,12]
+num_dias_retroceder_values = [1,2,3,4,5]
+max_dias_ejecucion_venta_values = [1,2,3,4,5,6,7,8,9,10]
 #num_dias_retroceder_values = [1,2]
 #max_dias_ejecucion_venta_values = [1,2]
 comision = 0
